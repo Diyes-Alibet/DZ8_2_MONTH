@@ -1,0 +1,78 @@
+canvas {
+    display: block;
+    margin: 0 auto;
+}
+body {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.modal {
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+.modal p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.modal button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.modal button:hover {
+    background-color: #45a049;
+}
+#game {
+    animation: game;
+    animation-fill-mode: forwards;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-left: 10px solid red;
+    border-right: 10px solid blue;
+    border-top: 10px solid green;
+    border-bottom: 10px solid gold;
+}
+@keyframes game {
+    10% {
+        box-shadow: 0 0 150px green;
+        border-radius: 70px;
+    }
+    20%{
+        box-shadow: 0 0 150px gold;
+    }
+    30%{
+        box-shadow: 0 0 150px purple;
+    }
+    40%{
+        box-shadow: 0 0 150px orange;
+    }
+    50% {
+        box-shadow: 0 0 150px blue;
+    }
+    60%{
+        box-shadow: 0 0 150px aqua;
+    }
+    70%{
+        box-shadow: 0 0 150px black;
+    }
+    100% {
+        box-shadow: 0 0 150px red;
+    }
+}
